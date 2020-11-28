@@ -36,7 +36,19 @@ public class Magpie3 {
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
-		} else {
+		} else if( findKeyword( statement, "cat" ) >= 0
+				|| findKeyword( statement, "dog" ) >= 0 ) {
+			response = "Tell me more about your pets.";
+		} else if( findKeyword( statement, "Mr. Padjen" ) >= 0 ) {
+			response = "He sounds like a good teacher.";
+		} else if( findKeyword( statement, "potato" ) >= 0 ) {
+			response = "Potatoes are yummy.";
+		} else if( findKeyword( statement, "flower" ) >= 0 ) {
+			response = "Tell me more about your plants.";
+		} else if( findKeyword( statement, "cabbage" ) >= 0 ) {
+			response = "Tell me more about food.";
+		}
+		else {
 			response = getRandomResponse();
 		}
 		return response;
@@ -134,6 +146,10 @@ public class Magpie3 {
 			response = "Do you really think so?";
 		} else if (whichResponse == 3) {
 			response = "You don't say.";
+		} else if (whichResponse == 4) {
+			response = "Okay.";
+		} else if (whichResponse == 5) {
+			response = "That's fascinating. Wow.";
 		}
 
 		return response;
